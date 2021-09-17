@@ -60,6 +60,36 @@ const routes = [
     name: "component4",
     component: () => import("../views/number2/component4.vue"),
   },
+  {
+    path: "/propsData",
+    name: "propsData",
+    component: () => import("../views/number3/propsData.vue"),
+  },
+  {
+    path: "/computed",
+    name: "computed",
+    component: () => import("../views/number3/computed.vue"),
+  },
+  {
+    path: "/Methods",
+    name: "Methods",
+    component: () => import("../views/number3/Methods.vue"),
+  },
+  {
+    path: "/Watch",
+    name: "Watch",
+    component: () => import("../views/number3/Watch.vue"),
+  },
+  {
+    path: "/Mixins",
+    name: "Mixins",
+    component: () => import("../views/number3/Mixins.vue"),
+  },
+  {
+    path: "/Extends",
+    name: "Extends",
+    component: () => import("../views/number3/Extends.vue"),
+  },
 ];
 
 const router = new VueRouter({

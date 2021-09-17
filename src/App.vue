@@ -44,10 +44,32 @@
               >
             </el-menu-item-group>
           </el-submenu>
-          <el-menu-item index="/demo" @click="goTo('/Home')">
-            <i class="el-icon-menu"></i>
-            <span slot="title">第二季</span>
-          </el-menu-item>
+          <el-submenu index="2">
+            <template slot="title">
+              <i class="el-icon-menu"></i>
+              <span>第三季 选项</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="/propsData" @click="goTo('/propsData')"
+                >propsData Option 全局扩展的数据传递</el-menu-item
+              >
+              <el-menu-item index="/computed" @click="goTo('/computed')"
+                >computed Option 计算选项</el-menu-item
+              >
+              <el-menu-item index="/Methods" @click="goTo('/Methods')"
+                >Methods Option方法选项</el-menu-item
+              >
+              <el-menu-item index="/Watch" @click="goTo('/Watch')"
+                >Watch 选项 监控数据</el-menu-item
+              >
+              <el-menu-item index="/Mixins" @click="goTo('/Mixins')"
+                >Mixins 混入选项操作</el-menu-item
+              >
+              <el-menu-item index="/Extends" @click="goTo('/Extends')"
+                >Extends Option 扩展选项</el-menu-item
+              >
+            </el-menu-item-group>
+          </el-submenu>
           <el-menu-item index="/index" @click="goTo('/About')">
             <i class="el-icon-setting"></i>
             <span slot="title">第三季</span>
