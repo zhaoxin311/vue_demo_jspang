@@ -1,32 +1,81 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+  <el-container>
+    <el-aside>
+      <el-col>
+        <h5>跟着jspang学习vue2.0</h5>
+        <el-menu
+          default-active="2"
+          class="el-menu-vertical-demo"
+          @open="handleOpen"
+          @close="handleClose"
+        >
+          <el-submenu index="1">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>第一季</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="1-1">选项1</el-menu-item>
+              <el-menu-item index="1-2">选项2</el-menu-item>
+            </el-menu-item-group>
+          </el-submenu>
+          <el-menu-item index="/demo" @click="goTo('/Home')">
+            <i class="el-icon-menu"></i>
+            <span slot="title">第二季</span>
+          </el-menu-item>
+          <el-menu-item index="/index" @click="goTo('/About')">
+            <i class="el-icon-setting"></i>
+            <span slot="title">第三季</span>
+          </el-menu-item>
+        </el-menu>
+      </el-col>
+    </el-aside>
+    <el-container>
+      <el-header>Header</el-header>
+      <el-main><router-view></router-view></el-main>
+    </el-container>
+  </el-container>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<script>
+export default {
+  data() {
+    return {};
+  },
+
+  methods: {
+    handleOpen(key, keyPath) {
+      console.log(key, keyPath);
+    },
+    handleClose(key, keyPath) {
+      console.log(key, keyPath);
+    },
+    goTo(path) {
+      this.$router.replace(path);
+    },
+  },
+};
+</script>
+
+<style>
+.el-header {
+  background-color: #b3c0d1;
+  color: #333;
   text-align: center;
-  color: #2c3e50;
+  line-height: 60px;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.el-aside {
+  background-color: #d3dce6;
+  color: #333;
+  text-align: center;
+  line-height: 20px;
+  height: 90vh;
+}
+.el-main {
+  background-color: #e9eef3;
+  color: #333;
+  text-align: center;
+  line-height: 160px;
 }
 </style>
