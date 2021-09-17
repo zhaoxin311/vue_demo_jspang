@@ -12,11 +12,27 @@
           <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-location"></i>
-              <span>第一季</span>
+              <span>第二季 全局API</span>
             </template>
             <el-menu-item-group>
-              <el-menu-item index="1-1">选项1</el-menu-item>
-              <el-menu-item index="1-2">选项2</el-menu-item>
+              <el-menu-item index="/directive" @click="goTo('/Directive')"
+                >vue.directive 自定义指令</el-menu-item
+              >
+              <el-menu-item index="/extend" @click="goTo('/Extend')"
+                >vue.extend 拓展实例构造器(no)</el-menu-item
+              >
+              <el-menu-item index="/set" @click="goTo('/Set')"
+                >vue.set 全局操作(no)</el-menu-item
+              >
+              <el-menu-item index="/LifeCycle" @click="goTo('/LifeCycle')"
+                >vue的生命周期</el-menu-item
+              >
+              <el-menu-item index="/template" @click="goTo('/template')"
+                >template 制作模板</el-menu-item
+              >
+              <el-menu-item index="/component" @click="goTo('/component')"
+                >component 初始组件(重要|no)</el-menu-item
+              >
             </el-menu-item-group>
           </el-submenu>
           <el-menu-item index="/demo" @click="goTo('/Home')">
@@ -75,7 +91,7 @@ export default {
 .el-main {
   background-color: #e9eef3;
   color: #333;
-  text-align: center;
-  line-height: 160px;
+  /* text-align: center;
+  line-height: 160px; */
 }
 </style>

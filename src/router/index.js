@@ -15,6 +15,36 @@ const routes = [
     name: "About",
     component: () => import("../views/About.vue"),
   },
+  {
+    path: "/directive",
+    name: "Directive",
+    component: () => import("../views/number2/directive.vue"),
+  },
+  {
+    path: "/extend",
+    name: "Extend",
+    component: () => import("../views/number2/extend.vue"),
+  },
+  {
+    path: "/set",
+    name: "Set",
+    component: () => import("../views/number2/set.vue"),
+  },
+  {
+    path: "/LifeCycle",
+    name: "LifeCycle",
+    component: () => import("../views/number2/LifeCycle.vue"),
+  },
+  {
+    path: "/template",
+    name: "template",
+    component: () => import("../views/number2/template.vue"),
+  },
+  {
+    path: "/component",
+    name: "component",
+    component: () => import("../views/number2/component.vue"),
+  },
 ];
 
 const router = new VueRouter({
