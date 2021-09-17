@@ -31,7 +31,16 @@
                 >template 制作模板</el-menu-item
               >
               <el-menu-item index="/component" @click="goTo('/component')"
-                >component 初始组件(重要|no)</el-menu-item
+                >component-1</el-menu-item
+              >
+              <el-menu-item index="/component2" @click="goTo('/component2')"
+                >component-2</el-menu-item
+              >
+              <el-menu-item index="/component3" @click="goTo('/component3')"
+                >component-3</el-menu-item
+              >
+              <el-menu-item index="/component4" @click="goTo('/component4')"
+                >component-4</el-menu-item
               >
             </el-menu-item-group>
           </el-submenu>

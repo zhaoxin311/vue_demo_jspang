@@ -45,6 +45,21 @@ const routes = [
     name: "component",
     component: () => import("../views/number2/component.vue"),
   },
+  {
+    path: "/component2",
+    name: "component2",
+    component: () => import("../views/number2/component2.vue"),
+  },
+  {
+    path: "/component3",
+    name: "component3",
+    component: () => import("../views/number2/component3.vue"),
+  },
+  {
+    path: "/component4",
+    name: "component4",
+    component: () => import("../views/number2/component4.vue"),
+  },
 ];
 
 const router = new VueRouter({

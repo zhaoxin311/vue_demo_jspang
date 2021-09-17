@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <h1>component 初始组件(重要)</h1>
-    <div id="components-demo">
-      <button-counter></button-counter>
+    <h1>component-1 初始组件(重要)</h1>
+    <div>
+      <arm-info></arm-info>
+      <panda></panda>
     </div>
   </div>
 </template>
@@ -10,15 +11,19 @@
 <script>
 import Vue from "vue";
 
-// 定义一个名为 button-counter 的新组件
-Vue.component("button-counter", {
-  data: function () {
-    return {
-      count: 0,
-    };
-  },
-  template:
-    '<button v-on:click="count++">You clicked me {{ count }} times.</button>',
+Vue.component("arm-info", {
+  template: `<div style="color:red">我是全局的arm-info组件</div>`,
 });
-new Vue({ el: "#components-demo" });
+
+export default {
+  name: "app",
+  data() {
+    return {};
+  },
+  components: {
+    panda: {
+      template: `<div style="color:green">我是局部的panda组件</div>`,
+    },
+  },
+};
 </script>
