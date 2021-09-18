@@ -90,6 +90,26 @@ const routes = [
     name: "Extends",
     component: () => import("../views/number3/Extends.vue"),
   },
+  {
+    path: "/attributes",
+    name: "attributes",
+    component: () => import("../views/number4/attributes.vue"),
+  },
+  {
+    path: "/method",
+    name: "method",
+    component: () => import("../views/number4/method.vue"),
+  },
+  {
+    path: "/event",
+    name: "event",
+    component: () => import("../views/number4/event.vue"),
+  },
+  {
+    path: "/slot",
+    name: "slot",
+    component: () => import("../views/number4/slot.vue"),
+  },
 ];
 
 const router = new VueRouter({

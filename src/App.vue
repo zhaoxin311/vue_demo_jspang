@@ -70,10 +70,26 @@
               >
             </el-menu-item-group>
           </el-submenu>
-          <el-menu-item index="/index" @click="goTo('/About')">
-            <i class="el-icon-setting"></i>
-            <span slot="title">第三季</span>
-          </el-menu-item>
+          <el-submenu index="4">
+            <template slot="title">
+              <i class="el-icon-setting"></i>
+              <span>第四季 实例和内置组件</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="/attributes" @click="goTo('/attributes')"
+                >实例属性</el-menu-item
+              >
+              <el-menu-item index="/method" @click="goTo('/method')"
+                >实例方法</el-menu-item
+              >
+              <el-menu-item index="/event" @click="goTo('/event')"
+                >实例事件</el-menu-item
+              >
+              <el-menu-item index="/slot" @click="goTo('/slot')"
+                >内置组件-slot讲解</el-menu-item
+              >
+            </el-menu-item-group>
+          </el-submenu>
         </el-menu>
       </el-col>
     </el-aside>
