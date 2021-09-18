@@ -3,17 +3,21 @@
     <h1>propsData Option 全局扩展的数据传递</h1>
     <hr />
     <div id="app">
-      {{ num }}
+      <title></title>
     </div>
   </div>
 </template>
 
 <script>
-export default {
+import Vue from "vue";
+var title_a = Vue.extend({
+  template: `<p>{{message}}</p>`,
   data() {
     return {
-      num: 10,
+      message: "zhaoxin",
     };
   },
-};
+});
+export default {};
+new title_a().$mount("title");
 </script>

@@ -47,14 +47,14 @@
           <el-submenu index="2">
             <template slot="title">
               <i class="el-icon-menu"></i>
-              <span>第三季 选项</span>
+              <span>第三季 构造器里的选项</span>
             </template>
             <el-menu-item-group>
               <el-menu-item index="/propsData" @click="goTo('/propsData')"
-                >propsData Option 全局扩展的数据传递</el-menu-item
+                >propsData Option 全局扩展的数据传递(no)</el-menu-item
               >
               <el-menu-item index="/computed" @click="goTo('/computed')"
-                >computed Option 计算选项</el-menu-item
+                >computed Option 计算选项(no)</el-menu-item
               >
               <el-menu-item index="/Methods" @click="goTo('/Methods')"
                 >Methods Option方法选项</el-menu-item
