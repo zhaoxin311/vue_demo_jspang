@@ -90,6 +90,26 @@
               >
             </el-menu-item-group>
           </el-submenu>
+          <el-submenu index="5">
+            <template slot="title">
+              <i class="el-icon-setting"></i>
+              <span>第五季 实例和内置组件</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item index="/about" @click="goTo('/about')"
+                >实例属性(NO)</el-menu-item
+              >
+              <el-menu-item index="/method" @click="goTo('/method')"
+                >实例方法(no)</el-menu-item
+              >
+              <el-menu-item index="/event" @click="goTo('/event')"
+                >实例事件(no)</el-menu-item
+              >
+              <el-menu-item index="/slot" @click="goTo('/slot')"
+                >内置组件-slot讲解(no)</el-menu-item
+              >
+            </el-menu-item-group>
+          </el-submenu>
         </el-menu>
       </el-col>
     </el-aside>

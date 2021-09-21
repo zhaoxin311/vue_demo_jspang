@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
+    <title>Examples Method Demo</title>
+</head>
+<body>
+    <h1>Examples Method Demo</h1>
+    <hr>
+    <div >
+        ddddddddd
+    </div>
+
+    <script type="text/javascript">
+      var jspang = Vue.extend({
+          template:`<p>{{message}}</p>`,
+          data:function(){
+              return {
+                  message:'Hello ,I am JSPang'
+              }
+          }
+      })
+      var vm = new jspang().$mount("#app")
+    </script>
+</body>
+</html>

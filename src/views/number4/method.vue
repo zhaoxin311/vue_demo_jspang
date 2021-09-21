@@ -3,17 +3,25 @@
     <h1>实例方法</h1>
     <hr />
     <div id="app">
-      {{ num }}
+      <!-- {{ message }} -->
     </div>
   </div>
 </template>
 
 <script>
-export default {
+import Vue from "vue";
+var zhaoxin = Vue.extend({
+  template: `<p>{{message}}</p>`,
   data() {
     return {
-      num: 10,
+      message: "zhhddddhhhh",
     };
+  },
+});
+new zhaoxin().$mount("#app");
+export default {
+  mounted() {
+    console.log("mounted被创建");
   },
 };
 </script>
