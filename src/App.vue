@@ -110,12 +110,28 @@
               >
             </el-menu-item-group>
           </el-submenu>
+          <el-submenu index="6">
+            <template slot="title">
+              <i class="el-icon-setting"></i>
+              <span>Vue 2.0 基础</span>
+            </template>
+            <el-menu-item-group>
+              <el-menu-item
+                index="/introduction"
+                @click="goTo('/introduction')"
+              >
+                1.0 介绍</el-menu-item
+              >
+            </el-menu-item-group>
+          </el-submenu>
         </el-menu>
       </el-col>
     </el-aside>
     <el-container>
       <el-header>Header</el-header>
-      <el-main><router-view></router-view></el-main>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
     </el-container>
   </el-container>
 </template>

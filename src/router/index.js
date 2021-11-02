@@ -6,6 +6,11 @@ Vue.use(VueRouter);
 
 const routes = [
   {
+    path: "/login",
+    component: () => import("@/views/login/index"),
+    hidden: true,
+  },
+  {
     path: "/Home",
     name: "Home",
     component: Home,
@@ -109,6 +114,11 @@ const routes = [
     path: "/slot",
     name: "slot",
     component: () => import("../views/number4/slot.vue"),
+  },
+  {
+    path: "/introduction",
+    name: "introduction",
+    component: () => import("../views/Base/introduction.vue"),
   },
 ];
 
